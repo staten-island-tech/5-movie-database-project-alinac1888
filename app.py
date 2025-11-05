@@ -1,12 +1,23 @@
 import json
-## Open the JSON file of movie data
 movies = open("./movies.json", encoding="utf8")
-## create variable "data" that represents the enitre movie list
 data = json.load(movies)
 
 for index, movie in enumerate(data):
     print(index, ":",(movie)['title'])
 
-choice = int(input("e"))
-if int({data[movie]['year']}) > ({data(movie)[choice]}):
-    print({data[movie]['title']})
+# choice = int(input("year after"))
+# choicee = int(input("year before"))
+
+# for movie in data:
+#     if choice < movie['year'] < choicee:
+#         print(movie['title'], movie['year'])
+
+choiceee = int(input("during year"))
+for movie in data:
+    if choiceee == movie['year']:
+        print(movie['title'])
+
+specific = input("EXACT movie u like")
+while True:
+    if specific == movie['title']:
+        print(movie['title'])
