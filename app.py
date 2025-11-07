@@ -19,13 +19,13 @@ for index, movie in enumerate(data):
 #     if choiceee == movie['year']:
 #         print(movie['title'])
 
-for i in data:  
+def search():
     specific = input("EXACT movie u like")
-    booth = []
-    booth.append(specific)
-    booth.append(movie['title'])
-    if len(specific) == len(movie['title']):
-        print(f"{movie['title']} is avliable")
-    else: 
-        print(f"{specific} is not found")
-        break 
+    found = 0
+    for i in data:  
+        if specific.lower() in i['title'].lower():
+            print(f"{i['title'].lower()} is avliable")
+            found += 1
+        if found == 0:
+            print("is not found")
+search()
