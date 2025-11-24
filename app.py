@@ -31,11 +31,11 @@ for index, movie in enumerate(data):
 # search()
 
 def search():
-    choice = input("g")
+    choice = input("genre")
     found = 0
     for i in data:  
         if choice in i['genres']:
-                print(f"{i['title']} is avliable")
+                print(f"{i['title']} is avaliable")
                 found += 1
         elif found == 0:
                 print("is not found")
